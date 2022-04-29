@@ -25,6 +25,10 @@
  * -If string equals "You win!" return result = true;
  * -If string equals "You lose" return result = false;
  * 
+ * Function that checks the winner (checkWinner(userScore, computerScore)):
+ * -If userScore is equal or greater than 3 return "You won the game!";
+ * -Else if computerScore is equal or greater than 3 return "You lost the game!";
+ * 
  * Function that plays a round roundPlay():
  * -Creates a empty string named result;
  * -Creates a variable named userSelection and attributes its value calling userPlay();
@@ -56,3 +60,4 @@
  * 
  * Calls a game at page initialization: console.log(game());
  */
+
