@@ -61,3 +61,8 @@
  * Calls a game at page initialization: console.log(game());
  */
 
+function computerPlay(){
+    min = Math.ceil(1);
+    max = Math.floor(3);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
