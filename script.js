@@ -87,3 +87,28 @@ function checkWinner(userScore, computerScore){
     if(userScore >= 3){return "You won the game!";}
     else if(computerScore >=3){return "You lost the game!";}
 }
+
+/**If userSelection equals 1 and computerSelection equals 1 return result "Draw! Both chose Rock!";
+ * -If userSelection equals 1 and computerSelection equals 2 return result "You lose! Paper beats Rock!";
+ * -If userSelection equals 1 and computerSelection equals 3 return result "You win! Rock beats Scissors!";
+ * -If userSelection equals 2 and computerSelection equals 1 return result "You win! Paper beats Rock!";
+ * -If userSelection equals 2 and computerSelection equals 2 return result "Draw! Both chose Paper!";
+ * -If userSelection equals 2 and computerSelection equals 3 return result "You lose! Scissors beats Paper!";
+ * -If userSelection equals 3 and computerSelection equals 1 return result "You lose! Rock beats Scissors!";
+ * -If userSelection equals 3 and computerSelection equals 2 return result "You win! Scissors beats Paper!";
+ * -If userSelection equals 3 and computerSelection equals 3 return result "Draw! Both chose Scissors!";**/
+
+function roundPlay(){
+    let userSelection = userPlay();
+    let computerSelection = computerPlay();
+
+    if(userSelection == 1 && computerSelection == 1){return "Draw! Both chose Rock!";}
+    else if(userSelection == 1 && computerSelection == 2){return "You lose! Paper beats Rock!";}
+    else if(userSelection == 1 && computerSelection == 3){return "You win! Rock beats Scissors!";}
+    else if(userSelection == 2 && computerSelection == 1){return "You win! Paper beats Rock!";}
+    else if(userSelection == 2 && computerSelection == 2){return "Draw! Both chose Paper!";}
+    else if(userSelection == 2 && computerSelection == 3){return "You lose! Scissors beats Paper!";}
+    else if(userSelection == 3 && computerSelection == 1){return "You lose! Rock beats Scissors!";}
+    else if(userSelection == 3 && computerSelection == 2){return "You win! Scissors beats Paper!";}
+    else if(userSelection == 3 && computerSelection == 3){return "Draw! Both chose Scissors!";}
+}
