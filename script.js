@@ -88,16 +88,6 @@ function checkWinner(userScore, computerScore){
     else if(computerScore >=3){return "You lost the game!";}
 }
 
-/**If userSelection equals 1 and computerSelection equals 1 return result "Draw! Both chose Rock!";
- * -If userSelection equals 1 and computerSelection equals 2 return result "You lose! Paper beats Rock!";
- * -If userSelection equals 1 and computerSelection equals 3 return result "You win! Rock beats Scissors!";
- * -If userSelection equals 2 and computerSelection equals 1 return result "You win! Paper beats Rock!";
- * -If userSelection equals 2 and computerSelection equals 2 return result "Draw! Both chose Paper!";
- * -If userSelection equals 2 and computerSelection equals 3 return result "You lose! Scissors beats Paper!";
- * -If userSelection equals 3 and computerSelection equals 1 return result "You lose! Rock beats Scissors!";
- * -If userSelection equals 3 and computerSelection equals 2 return result "You win! Scissors beats Paper!";
- * -If userSelection equals 3 and computerSelection equals 3 return result "Draw! Both chose Scissors!";**/
-
 function roundPlay(){
     let userSelection = userPlay();
     let computerSelection = computerPlay();
@@ -112,3 +102,22 @@ function roundPlay(){
     else if(userSelection == 3 && computerSelection == 2){return "You win! Scissors beats Paper!";}
     else if(userSelection == 3 && computerSelection == 3){return "Draw! Both chose Scissors!";}
 }
+
+function game(){
+    let resultGame;
+    let userScore = 0;
+    let computerScore = 0;
+    while(resultGame == undefined){
+        let resultRound = roundPlay();
+        console.log(resultRound);
+        if(checkVictory(resultRound) == undefined){}
+        else if(checkVictory(resultRound) == true){userScore++;}
+        else {computerScore++;}
+
+        resultGame = checkWinner(userScore, computerScore);
+    }
+
+    return resultGame;
+}
+
+console.log(game());
