@@ -62,7 +62,18 @@
  */
 
 function computerPlay(){
-    min = Math.ceil(1);
-    max = Math.floor(3);
+    let min = Math.ceil(1);
+    let max = Math.floor(3);
     return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function userPlay(){
+    let string = prompt("Let's play! Type rock, paper or scissors!").toLowerCase();
+    if(string == "rock"){return 1;}
+    else if (string == "paper"){return 2;}
+    else if (string == "scissors"){return 3;}
+    else {
+        alert("Please type a valid play! Either rock, paper or scissors!");
+        return userPlay();
+    }
 }
