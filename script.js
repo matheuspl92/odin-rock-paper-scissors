@@ -77,3 +77,8 @@ function userPlay(){
         return userPlay();
     }
 }
+
+function checkVictory(string){
+    if(string.slice(0,8) == "You win!"){return true;}
+    else if(string.slice(0,8) == "You lose"){return false;}
+}
