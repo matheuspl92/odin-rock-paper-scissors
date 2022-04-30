@@ -79,6 +79,11 @@ function userPlay(){
 }
 
 function checkVictory(string){
-    if(string.slice(0,8) == "You win!"){return true;}
-    else if(string.slice(0,8) == "You lose"){return false;}
+    if (string.slice(0,8) == "You win!") {return true;}
+    else if (string.slice(0,8) == "You lose") {return false;}
+}
+
+function checkWinner(userScore, computerScore){
+    if(userScore >= 3){return "You won the game!";}
+    else if(computerScore >=3){return "You lost the game!";}
 }
