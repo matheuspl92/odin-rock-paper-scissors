@@ -10,8 +10,14 @@ function computerPlay(){
 }
 
 function checkVictory(string){
-    if (string.slice(0,8) == "You win!") {return true;}
-    else if (string.slice(0,8) == "You lose") {return false;}
+    const resultSelector = document.querySelector('.results');
+
+    if (string.slice(0,8) == "You win!") {userScore++;}
+    else if (string.slice(0,8) == "You lose") {computerScore++;}
+
+    resultSelector.textContent = string;
+    
+    checkWinner();
 }
 
 function checkWinner(userScore, computerScore){
