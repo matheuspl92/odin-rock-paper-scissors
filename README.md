@@ -81,9 +81,11 @@ Some of the skills demonstrated on this project:
 - Add 3 buttons for each selection (Rock, paper and scissors);
 - Add a div to show the total score;
 - Add a div to show the results of a round and the the game;
+- Add the attribute defer to the script tag;
 
 #HTML --- PSEUDOCODE
 
+- Add the attribute defer to the script tag;
 - Add a div with class="container";
 - Add a child div to the previous div with class="score";
 - Add another child div with class="results";
@@ -125,8 +127,14 @@ Change checkVictory() to receive a string, print it on the page and increment us
 Change checkWinner() to print the winner on the page when someone reaches 5 victories;
 - Add const scoreSelector = document.querySelector('.score');
 - Change the number of victories from 3 to 5;
-- Change the return true or false to a declaration that prints the winner in text content of scoreSelector;
-- If the winner is not decided make the text content in scoreSelector = `YOU: ${userScore} - COMPUTER: ${computerScore};
+- Change the return true or false to a declaration that prints the winner in text content of scoreSelector and reset the score;
+- If the winner is not decided make the text content in scoreSelector = `YOU: ${userScore} - COMPUTER: ${computerScore}`;
 
+Add function that initializes the game
+- Add const scoreSelector = document.querySelector('.score');
+- Add const resultSelector = document.querySelector('.results');
+- Make the text content in scoreSelector = `YOU: ${userScore} - COMPUTER: ${computerScore}`;
+- Make the text content in resultSelector = "Let's play! Choose one!";
+- Calls addEventListeners();
 
 
