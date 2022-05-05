@@ -19,19 +19,18 @@ function checkWinner(userScore, computerScore){
     else if(computerScore >=3){return "You lost the game!";}
 }
 
-function roundPlay(){
-    let userSelection = userPlay();
+function roundPlay(userSelection){
     let computerSelection = computerPlay();
 
-    if(userSelection == 1 && computerSelection == 1){return "Draw! Both chose Rock!";}
-    else if(userSelection == 1 && computerSelection == 2){return "You lose! Paper beats Rock!";}
-    else if(userSelection == 1 && computerSelection == 3){return "You win! Rock beats Scissors!";}
-    else if(userSelection == 2 && computerSelection == 1){return "You win! Paper beats Rock!";}
-    else if(userSelection == 2 && computerSelection == 2){return "Draw! Both chose Paper!";}
-    else if(userSelection == 2 && computerSelection == 3){return "You lose! Scissors beats Paper!";}
-    else if(userSelection == 3 && computerSelection == 1){return "You lose! Rock beats Scissors!";}
-    else if(userSelection == 3 && computerSelection == 2){return "You win! Scissors beats Paper!";}
-    else if(userSelection == 3 && computerSelection == 3){return "Draw! Both chose Scissors!";}
+    if(userSelection == 1 && computerSelection == 1){checkVictory("Draw! Both chose Rock!");}
+    else if(userSelection == 1 && computerSelection == 2){checkVictory("You lose! Paper beats Rock!");}
+    else if(userSelection == 1 && computerSelection == 3){checkVictory("You win! Rock beats Scissors!");}
+    else if(userSelection == 2 && computerSelection == 1){checkVictory("You win! Paper beats Rock!");}
+    else if(userSelection == 2 && computerSelection == 2){checkVictory("Draw! Both chose Paper!");}
+    else if(userSelection == 2 && computerSelection == 3){checkVictory("You lose! Scissors beats Paper!");}
+    else if(userSelection == 3 && computerSelection == 1){checkVictory("You lose! Rock beats Scissors!");}
+    else if(userSelection == 3 && computerSelection == 2){checkVictory("You win! Scissors beats Paper!");}
+    else if(userSelection == 3 && computerSelection == 3){checkVictory("Draw! Both chose Scissors!");}
 }
 
 function addEventListeners(){
