@@ -71,4 +71,62 @@ Some of the skills demonstrated on this project:
  * -Returns result;
  * 
  * Calls a game at page initialization: console.log(game());
- */
+ 
+ ============================================
+
+ UI-VERSION GOALS:
+
+ #HTML
+
+- Add 3 buttons for each selection (Rock, paper and scissors);
+- Add a div to show the total score;
+- Add a div to show the results of a round and the the game;
+
+#HTML --- PSEUDOCODE
+
+- Add a div with class="container";
+- Add a child div to the previous div with class="score";
+- Add another child div with class="results";
+- Add another child div with class="button-container";
+- Add 3 buttons to the previous div, with classes "btn-rock", "btn-paper" and "btn-scissors", respectively. Put "Rock", "Paper" and "Scissors", respectively, on their content; 
+
+ #JAVASCRIPT
+
+- Plays until someone reaches 5 points;
+- Remove the logic that plays exactly five rounds;
+- Add an event listener to the buttons and call roundPlay() with the correct userSelection every time a button is clicked;
+- Change all console.logs into DOM methods;
+
+#JAVASCRIPT --- PSEUDOCODE
+
+- Remove the console.log(game());
+- Remove userPlay();
+- Remove game();
+- Add a global variable userScore = 0;
+- Add a global variable computerScore = 0;
+
+Add function that add an event listener to all the buttons and calls roundPlay() with the correct userSelection;
+- Add const buttons array from document.querySelectorAll('button');
+- For each button on buttons array add a 'click' event listener that calls roundPlay() with the correct arg. 1 for Rock, 2 for Paper and 3 for Scissors;
+
+Change roundPlay() so that it receives userSelection and plays a round and calls checkVictory() and passes the correct string;
+- Remove userSelection variable declaration;
+- Add userSelection parameter;
+- Change the expressions in return calling checkVictory(string); 
+
+Change checkVictory() to receive a string, print it on the page and increment userScore or computerScore;
+- Add const resultSelector = document.querySelector('.results');
+- Change "return true" to "return userScore++;
+- Change "return false" to "return computerScore++;
+- Make the text content in resultSelector = string;
+- Calls checkWinner();
+
+
+Change checkWinner() to print the winner on the page when someone reaches 5 victories;
+- Add const scoreSelector = document.querySelector('.score');
+- Change the number of victories from 3 to 5;
+- Change the return true or false to a declaration that prints the winner in text content of scoreSelector;
+- If the winner is not decided make the text content in scoreSelector = `YOU: ${userScore} - COMPUTER: ${computerScore};
+
+
+
