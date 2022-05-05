@@ -20,9 +20,18 @@ function checkVictory(string){
     checkWinner();
 }
 
-function checkWinner(userScore, computerScore){
-    if(userScore >= 3){return "You won the game!";}
-    else if(computerScore >=3){return "You lost the game!";}
+function checkWinner(){
+    const scoreSelector = document.querySelector('.score');
+
+    if(userScore >= 5){
+        scoreSelector.textContent = "You won the game!";
+    }
+    else if(computerScore >=5){
+        scoreSelector.textContent = "You lost the game!";
+    }
+    else {
+        scoreSelector.textContent = `YOU: ${userScore} - COMPUTER: ${computerScore}`;
+    }
 }
 
 function roundPlay(userSelection){
