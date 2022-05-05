@@ -1,7 +1,7 @@
 let userScore = 0;
 let computerScore = 0;
 
-addEventListeners();
+init();
 
 function computerPlay(){
     let min = Math.ceil(1);
@@ -60,4 +60,14 @@ function addEventListeners(){
         else {roundPlay(3);}
 
     }))
+}
+
+function init(){
+    const scoreSelector = document.querySelector('.score');
+    const resultSelector = document.querySelector('.results');
+
+    scoreSelector.textContent = `YOU: ${userScore} - COMPUTER: ${computerScore}`;
+    resultSelector.textContent = "Let's play! Choose one!";
+
+    addEventListeners();
 }
