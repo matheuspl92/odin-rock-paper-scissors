@@ -1,3 +1,6 @@
+let userScore = 0;
+let computerScore = 0;
+
 function computerPlay(){
     let min = Math.ceil(1);
     let max = Math.floor(3);
